@@ -1,0 +1,54 @@
+/*
+Iphone 8 Size:
+Width: 375px
+Height: 677px
+*/
+
+/* Calculating the size of boxes*/
+* {
+    box-sizing: border-box;
+}
+
+
+
+html {
+    /* Colors */
+    --main-background: #000060;
+    --text-color: #F3ECD9;
+    --secondary-color-1: #1B7AEE;
+    --secondary-color-2: #D64C58;
+
+    --rhythm: 1.5rem;
+
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--main-background);
+    color: var(--text-color)
+}
+
+header {
+    text-align: center;
+}
+
+main *{
+    margin: 0;
+}
+
+main h2 {
+    margin-top: var(--rhythm);
+}
+
+table.nav-system {
+    background-color: var(--text-color);
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    width: 100vw;
+}
+
+.nav-system th {
+    border: 2px solid var(--main-background);
+    padding: 0.625rem;
+}
