@@ -11,28 +11,30 @@ Height: 677px
 
 @font-face {
     font-family: 'qora';
-    src: url("font/lora/Lora-VariableFont_wght.ttf") format("truetype");
+    src: url("../font/lora/Lora-VariableFont_wght.ttf") format("truetype");
     font-weight: 400 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'qora';
-    src: url("font/lora/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("../font/lora/Lora-Italic-VariableFont_wght.ttf") format("truetype");
     font-weight: 400 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'quicksand';
-    src: url("font/quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
+    src: url("../font/quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
     font-weight: 300 700;
     font-style: normal;
 }
 
 html {
     /* Colors */
-    --main-background: #000060;
+    --main-background: #000070;
     --text-color: #F3ECD9;
+    --button-colors: #0000BF;
+    /* Add a light accent color for fonts*/
     --secondary-color-1: #1B7AEE;
     --secondary-color-2: #D64C58;
 
@@ -69,7 +71,7 @@ main p {
 }
 
 table.nav-system {
-    background-color: var(--text-color);
+    background-color: var(--button-colors);
     bottom: 0;
     right: 0;
     position: fixed;
@@ -77,6 +79,11 @@ table.nav-system {
 }
 
 .nav-system th {
-    border: 2px solid var(--main-background);
+    border: 2px solid var(--text-color);
     padding: 0.625rem;
+}
+
+.nav-system a {
+    color:var(--text-color);
+    text-decoration: none;
 }
