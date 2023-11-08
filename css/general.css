@@ -9,7 +9,25 @@ Height: 677px
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'qora';
+    src: url("font/lora/Lora-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'qora';
+    src: url("font/lora/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400 700;
+    font-style: italic;
+}
 
+@font-face {
+    font-family: 'quicksand';
+    src: url("font/quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
+    font-weight: 300 700;
+    font-style: normal;
+}
 
 html {
     /* Colors */
@@ -17,6 +35,10 @@ html {
     --text-color: #F3ECD9;
     --secondary-color-1: #1B7AEE;
     --secondary-color-2: #D64C58;
+
+    /* Fonts */
+    --font-lora: "lora";
+    --font-quicksand:"quicksand";
 
     --rhythm: 1.5rem;
 
@@ -30,6 +52,7 @@ body {
 
 header {
     text-align: center;
+    font-family: var(--font-quicksand);
 }
 
 main *{
@@ -37,7 +60,12 @@ main *{
 }
 
 main h2 {
+    font-family: var(--font-quicksand);
     margin-top: var(--rhythm);
+}
+
+main p {
+    font-family: var(--font-lora);
 }
 
 table.nav-system {
