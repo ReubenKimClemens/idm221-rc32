@@ -5,6 +5,7 @@ General css for all pages. Has styles for font and the nav system.
 /* Calculating the size of boxes*/
 * {
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 /* Font Families */
@@ -31,7 +32,7 @@ html {
     /* Colors */
     --main-background: #000070;
     --text-color: #F3ECD9;
-    --button-colors: #0000BF;
+    --button-colors: #0000FF;
     --secondary-color-1: #1B7AEE;
     --secondary-color-2: #D64C58;
 
