@@ -1,7 +1,5 @@
 /*
-Iphone 8 Size:
-Width: 375px
-Height: 677px
+General css for all pages. Has styles for font and the nav system.
 */
 
 /* Calculating the size of boxes*/
@@ -9,19 +7,19 @@ Height: 677px
     box-sizing: border-box;
 }
 
+/* Font Families */
 @font-face {
-    font-family: 'qora';
+    font-family: 'lora';
     src: url("../font/lora/Lora-VariableFont_wght.ttf") format("truetype");
     font-weight: 400 700;
     font-style: normal;
 }
 @font-face {
-    font-family: 'qora';
+    font-family: 'lora';
     src: url("../font/lora/Lora-Italic-VariableFont_wght.ttf") format("truetype");
     font-weight: 400 700;
     font-style: italic;
 }
-
 @font-face {
     font-family: 'quicksand';
     src: url("../font/quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
@@ -34,7 +32,6 @@ html {
     --main-background: #000070;
     --text-color: #F3ECD9;
     --button-colors: #0000BF;
-    /* Add a light accent color for fonts*/
     --secondary-color-1: #1B7AEE;
     --secondary-color-2: #D64C58;
 
@@ -42,8 +39,8 @@ html {
     --font-lora: "lora";
     --font-quicksand:"quicksand";
 
-    --rhythm: 1.5rem;
-
+    /* Miscellaneous */
+    --rhythm: 1rem;
     font-size: 100%;
 }
 
@@ -55,21 +52,10 @@ body {
 header {
     text-align: center;
     font-family: var(--font-quicksand);
+    margin-top: 1%;
 }
 
-main *{
-    margin: 0;
-}
-
-main h2 {
-    font-family: var(--font-quicksand);
-    margin-top: var(--rhythm);
-}
-
-main p {
-    font-family: var(--font-lora);
-}
-
+/* nav-system Styles */
 table.nav-system {
     background-color: var(--button-colors);
     bottom: 0;
@@ -77,12 +63,10 @@ table.nav-system {
     position: fixed;
     width: 100vw;
 }
-
 .nav-system th {
     border: 2px solid var(--text-color);
     padding: 0.625rem;
 }
-
 .nav-system a {
     color:var(--text-color);
     text-decoration: none;
