@@ -1,9 +1,5 @@
-/*
-General css for all pages. Has styles for font and the nav system.
-*/
-
-/* Calculating the size of boxes*/
-* {
+/* fonts & colors & variables for page */
+* { /* Calculating the size of boxes, resetting margin to 0 */
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -30,45 +26,70 @@ General css for all pages. Has styles for font and the nav system.
 
 html {
     /* Colors */
-    --main-background: #000070;
-    --text-color: #F3ECD9;
-    --button-colors: #0000FF;
-    --secondary-color-1: #1B7AEE;
-    --secondary-color-2: #D64C58;
+    --main-background: #05061f;
+    --text-color: #FFFFFF;
 
     /* Fonts */
     --font-lora: "lora";
     --font-quicksand:"quicksand";
 
     /* Miscellaneous */
-    --rhythm: 1rem;
+    --rhythm: 2rem;
     font-size: 100%;
 }
+/* ^End of section^ */
 
-body {
+/* For all pages*/
+body { /* Sets the background of the page to black and the text color to white */
     background-color: var(--main-background);
     color: var(--text-color)
 }
 
-header {
+header { /* Makes the <h1> in the center bold, have small-caps, and quicksand font */
+    font: small-caps bold 2rem var(--font-quicksand);
+    margin: 1rem 0 2rem;
     text-align: center;
-    font-family: var(--font-quicksand);
-    margin-top: 1%;
 }
 
-/* nav-system Styles */
-table.nav-system {
-    background-color: var(--button-colors);
-    bottom: 0;
-    right: 0;
-    position: fixed;
+main h2 { /* Bolds the <h2> tags  and makes them 2.5rem size. Also underlines to make more distinct */
+    font: bold 2.5rem var(--font-quicksand);
+    margin: 0 5rem .33rem;
+    text-decoration: underline;
+}
+
+main p { /* Sets the margin of the paragraphs and affects the line height, size, and font family  */
+    font: 1.5rem/2.25rem var(--font-lora);
+    margin: 0 5rem calc(var(--rhythm) + .5rem);
+}
+
+main img{ /* Just makes the images the same size as the display */
     width: 100vw;
 }
-.nav-system th {
-    border: 2px solid var(--text-color);
-    padding: 0.625rem;
+
+footer { /* Sets padding on top so the nav system doesn't block any content off */
+    padding-top: 10rem;
 }
-.nav-system a {
-    color:var(--text-color);
-    text-decoration: none;
+
+table.nav-system { /* Makes the nav system stay fixed at the bottom. */
+    background-color: var(--main-background);
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    width: 100vw;
 }
+/* ^End of section^ */
+
+/* For portfolio */
+main video { /* Just makes the video the size of the display */
+    width: 100vw;
+}
+
+section h2 { /* aligns the <h2> over the images and videos */
+    text-align: center;
+}
+
+section img+p, section video+p { /* Pushes the content below each p down so they don't overlap */
+    margin-bottom: calc(var(--rhythm) * 5);
+    margin-top: var(--rhythm);
+}
+/* ^End of section^ */
